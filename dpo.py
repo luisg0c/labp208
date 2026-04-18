@@ -30,7 +30,7 @@ modelo = AutoPeftModelForCausalLM.from_pretrained(
 
 tok = AutoTokenizer.from_pretrained(MODELO_BASE)
 tok.pad_token = tok.eos_token
-tok.padding_side = "right"
+tok.padding_side = "left"
 
 ds = load_dataset("json", data_files="preferencias.jsonl", split="train")
 
